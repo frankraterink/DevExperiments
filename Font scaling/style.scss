@@ -39,7 +39,7 @@ body {
 	.normal {
   	font-family: 'Mako', Sans-Serif;
   	font-size: #{$normal}em;
-  	margin-bottom: 0.8em;
+  	margin-bottom: 0.8em; 
   	
   	@media all and (max-width: 600px) {
       text-align: justify;
