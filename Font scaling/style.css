@@ -1,0 +1,58 @@
+/* style.scss */
+/* = 1em =  */
+body {
+  font-family: arial;
+  /* font-size: em($default); */
+  font-size: 62.5%;
+  /* makes default font-size 10px */
+  padding: 40px; }
+  @media all and (max-width: 800px) {
+    body {
+      font-size: 56.25%;
+      /* makes default font-size 9px */ } }
+  body h1 {
+    font-family: "Libre Baskerville", serif; }
+  body .normal {
+    font-family: "Mako", Sans-Serif;
+    font-size: 1.618em;
+    margin-bottom: 0.8em; }
+    @media all and (max-width: 600px) {
+      body .normal {
+        text-align: justify; } }
+    body .normal.width-page {
+      max-width: 70rem;
+      /* root em, dynamic width */
+      min-width: 23rem;
+      /* root em, dynamic width */
+      line-height: 1.85em;
+      /* min-line-height */ }
+    body .normal.width-600 {
+      width: 600px;
+      line-height: 1.4em;
+      /* fixed-line-height */ }
+  body .larger {
+    font-size: 2.618em;
+    line-height: 1.3em;
+    margin-bottom: 0.8em;
+    font-family: "Mako", Sans-Serif; }
+    @media all and (max-width: 600px) {
+      body .larger {
+        text-align: justify; } }
+    body .larger.width-page {
+      max-width: 70rem;
+      /* root em, dynamic width */
+      min-width: 23rem;
+      /* root em, dynamic width */
+      line-height: 1.75em;
+      /* min-line-height */ }
+    body .larger.width-600 {
+      width: 600px;
+      line-height: 1.4em;
+      /* fixed-line-height */ }
+  body .largest {
+    font-size: 6.854em;
+    line-height: 1.2em;
+    margin-bottom: 0.3em; }
+    @media all and (max-width: 600px) {
+      body .largest.width-600 {
+        font-size: 5.4832em; } }

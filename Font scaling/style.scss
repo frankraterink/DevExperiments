@@ -1,0 +1,90 @@
+/* style.scss */
+
+$default: 16; /* = 1em =  */
+$default-min800: 14;
+
+$normal: 1.618;
+$larger: 2.618;
+$largest: 6.854;
+$largest-min600: 49.301;
+
+$fluid-minwidth: 23;
+$fluid-maxwidth: 70;
+
+@function em($pixes) {
+  @return #{$pixes/$default}em
+};
+
+@function lineheight($fontsize) {
+  @return #{$fontsize / $default}em
+};
+
+body {
+	font-family: arial;
+  /* font-size: em($default); */
+	font-size: 62.5%; /* makes default font-size 10px */
+	padding: 40px;
+	@media all and (max-width: 800px) {
+    font-size: 56.25%; /* makes default font-size 9px */
+	}
+	
+	h1, p {
+
+	}
+	
+	h1 {
+  	font-family: 'Libre Baskerville', serif;
+	}
+	
+	.normal {
+  	font-family: 'Mako', Sans-Serif;
+  	font-size: #{$normal}em;
+  	margin-bottom: 0.8em;
+  	
+  	@media all and (max-width: 600px) {
+      text-align: justify;
+  	}	
+  	&.width-page { 
+      max-width: #{$fluid-maxwidth}rem; /* root em, dynamic width */
+      min-width: #{$fluid-minwidth}rem; /* root em, dynamic width */
+    	line-height: 1.85em; /* min-line-height */
+  	}
+  	&.width-600 {
+      width: 600px;
+      line-height: 1.4em; /* fixed-line-height */
+  	}
+	}
+	
+	.larger {
+  	font-size: #{$larger}em;
+  	line-height: 1.3em;
+  	margin-bottom: 0.8em;
+  	font-family: 'Mako', Sans-Serif;
+  	@media all and (max-width: 600px) {
+      text-align: justify;
+  	}	
+  	&.width-page {
+      max-width: #{$fluid-maxwidth}rem; /* root em, dynamic width */
+      min-width: #{$fluid-minwidth}rem; /* root em, dynamic width */
+    	line-height: 1.75em; /* min-line-height */
+  	}
+  	&.width-600 {
+      width: 600px;
+      line-height: 1.4em; /* fixed-line-height */
+    }
+	}
+	
+		
+	.largest {
+  	font-size: #{$largest}em;
+  	line-height: 1.2em;
+  	margin-bottom: 0.3em;
+  	&.width-600 {
+      @media all and (max-width: 600px) {
+        font-size: #{$largest * 0.8}em;	
+    	}	    	
+  	}
+  	
+	}
+	
+}
